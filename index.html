@@ -7,43 +7,33 @@
     <style>
         html { 
             scroll-behavior: smooth; 
-            scroll-padding-top: 80px; /* Ajustado para alinhar melhor o título */
+            scroll-padding-top: 80px; 
         }
 
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Segoe UI', sans-serif; 
             line-height: 1.5; 
-            max-width: 850px; 
+            max-width: 800px; 
             margin: 0 auto; 
             padding: 0; 
             background-color: #f0f2f5; 
-            color: #333;
         }
         
-        header { background-color: #ffffff; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2em; color: #1a1a1a; }
+        header { background-color: #ffffff; padding: 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 1.8em; }
 
         nav { 
             background: rgba(255, 255, 255, 0.95); 
             backdrop-filter: blur(10px); 
-            padding: 12px 0; 
+            padding: 10px 0; 
             text-align: center; 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        nav a { 
-            color: #444; 
-            text-decoration: none; 
-            margin: 0 10px; 
-            font-weight: 600; 
-            font-size: 0.8em; 
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
+        nav a { color: #444; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.8em; text-transform: uppercase; }
         nav a:hover { color: #007bff; }
 
         .container { padding: 15px; }
@@ -52,28 +42,24 @@
             background: #ffffff; 
             padding: 20px; 
             border-radius: 12px; 
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
             margin-bottom: 25px; 
             border: 1px solid #eee;
         }
         
-        h2 { border-left: 5px solid #007bff; padding-left: 12px; margin-top: 0; color: #222; font-size: 1.5em; margin-bottom: 10px; }
-
+        h2 { border-left: 5px solid #007bff; padding-left: 12px; margin-top: 0; font-size: 1.5em; }
         p { margin-bottom: 10px; font-size: 0.95em; }
 
         ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
-        li { background: #f8f9fa; padding: 6px 12px; border-radius: 20px; border: 1px solid #efefef; font-size: 0.85em; }
+        li { background: #f8f9fa; padding: 5px 12px; border-radius: 20px; border: 1px solid #efefef; font-size: 0.85em; }
         
-        /* Ajuste para imagens menores */
+        /* IMAGENS MENORES */
         .img-container { width: 100%; max-width: 500px; margin: 0 auto; }
-
         img { 
             display: block; 
             width: 100%;
-            height: 220px; /* Altura reduzida para caber na tela */
+            height: 220px; /* Tamanho reduzido para caber ao clicar */
             object-fit: cover; 
             border-radius: 10px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         footer { text-align: center; padding: 30px; font-size: 0.8em; color: #888; }
@@ -81,9 +67,7 @@
 </head>
 <body>
 
-<header>
-    <h1>TIPOS DE ENERGIA</h1>
-</header>
+<header><h1>TIPOS DE ENERGIA</h1></header>
 
 <nav>
     <a href="#solar">Solar</a>
@@ -97,12 +81,8 @@
     
     <div class="card" id="solar">
         <h2>Energia Solar ☀️</h2>
-        <p>Capta a luz do sol através de painéis fotovoltaicos para gerar eletricidade residencial.</p>
-        <ul>
-            <li>✨ Luz Solar</li>
-            <li>⚡ Corrente Elétrica</li>
-            <li>🔄 Inversor</li>
-        </ul>
+        <p>Capta a luz do sol através de painéis fotovoltaicos para gerar eletricidade.</p>
+        <ul><li>✨ Luz Solar</li><li>⚡ Painéis</li><li>🔄 Inversor</li></ul>
         <div class="img-container">
             <img src="https://unsplash.com" alt="Solar">
         </div>
@@ -110,12 +90,8 @@
 
     <div class="card" id="eolica">
         <h2>Energia Eólica 🌪️</h2>
-        <p>Utiliza a força dos ventos para girar hélices e acionar geradores elétricos limpos.</p>
-        <ul>
-            <li>🌬️ Força do Vento</li>
-            <li>⚙️ Giro do Rotor</li>
-            <li>⚡ Eletricidade</li>
-        </ul>
+        <p>Utiliza a força dos ventos para girar hélices e acionar geradores elétricos.</p>
+        <ul><li>🌬️ Vento</li><li>⚙️ Turbinas</li><li>⚡ Limpa</li></ul>
         <div class="img-container">
             <img src="https://unsplash.com" alt="Eólica">
         </div>
@@ -123,12 +99,8 @@
 
     <div class="card" id="hidro">
         <h2>Energia Hidrelétrica 💧</h2>
-        <p>Aproveita o movimento das águas em rios e barragens para gerar energia estável.</p>
-        <ul>
-            <li>🌊 Pressão da Água</li>
-            <li>🔄 Turbinas</li>
-            <li>🔌 Rede Elétrica</li>
-        </ul>
+        <p>Aproveita o movimento das águas em rios e barragens para gerar energia.</p>
+        <ul><li>🌊 Rios</li><li>🔄 Turbinas</li><li>🔌 Estável</li></ul>
         <div class="img-container">
             <img src="https://unsplash.com" alt="Hidro">
         </div>
@@ -136,12 +108,8 @@
 
     <div class="card" id="biomassa">
         <h2>Energia Biomassa 🪵</h2>
-        <p>Gerada através da decomposição de matéria orgânica, funcionando como bateria natural.</p>
-        <ul>
-            <li>🚜 Matéria Orgânica</li>
-            <li>🔥 Calor e Vapor</li>
-            <li>♻️ Reuso de Lixo</li>
-        </ul>
+        <p>Gerada através da decomposição de matéria orgânica (plantas e resíduos).</p>
+        <ul><li>🚜 Orgânica</li><li>🔥 Vapor</li><li>♻️ Reuso</li></ul>
         <div class="img-container">
             <img src="https://unsplash.com" alt="Biomassa">
         </div>
@@ -149,12 +117,8 @@
 
     <div class="card" id="geo">
         <h2>Energia Geotérmica 🔥</h2>
-        <p>Utiliza o calor do interior da Terra para fornecer eletricidade constante 24h por dia.</p>
-        <ul>
-            <li>🕳️ Calor da Terra</li>
-            <li>💨 Vapor Natural</li>
-            <li>🌍 Sustentabilidade</li>
-        </ul>
+        <p>Utiliza o calor do interior da Terra para gerar vapor e eletricidade constante.</p>
+        <ul><li>🕳️ Calor</li><li>💨 Vapor</li><li>🌍 Interna</li></ul>
         <div class="img-container">
             <img src="https://unsplash.com" alt="Geotérmica">
         </div>
@@ -162,9 +126,7 @@
 
 </div>
 
-<footer>
-    <p>Site criado por <strong>Luan</strong> para atividade escolar &copy; 2024</p>
-</footer>
+<footer><p>Site criado por <strong>Luan</strong> para atividade escolar &copy; 2024</p></footer>
 
 </body>
 </html>
