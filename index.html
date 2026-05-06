@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos de Energia</title>
     <style>
+        /* Efeito de rolagem suave e ajuste para o menu não cobrir o título */
         html { 
             scroll-behavior: smooth; 
             scroll-padding-top: 80px; 
@@ -12,62 +13,79 @@
 
         body { 
             font-family: 'Segoe UI', sans-serif; 
-            line-height: 1.5; 
+            line-height: 1.4; 
             max-width: 800px; 
             margin: 0 auto; 
             padding: 0; 
-            background-color: #f0f2f5; 
+            background-color: #f4f7f6; 
+            color: #333;
         }
         
-        header { background-color: #ffffff; padding: 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 1.8em; }
+        header { background: #fff; padding: 25px; text-align: center; border-bottom: 1px solid #ddd; }
+        header h1 { margin: 0; font-size: 1.8em; color: #1a1a1a; text-transform: uppercase; }
 
+        /* Menu de Navegação */
         nav { 
             background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(10px); 
-            padding: 10px 0; 
+            backdrop-filter: blur(5px);
+            padding: 12px 0; 
             text-align: center; 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        nav a { color: #444; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.8em; text-transform: uppercase; }
-        nav a:hover { color: #007bff; }
+        nav a { 
+            color: #007bff; 
+            text-decoration: none; 
+            margin: 0 10px; 
+            font-weight: bold; 
+            font-size: 0.75em; 
+            text-transform: uppercase;
+        }
+
+        nav a:hover { text-decoration: underline; }
 
         .container { padding: 15px; }
 
+        /* Estilo dos Cards */
         .card { 
-            background: #ffffff; 
+            background: #fff; 
             padding: 20px; 
             border-radius: 12px; 
             margin-bottom: 25px; 
             border: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
-        h2 { border-left: 5px solid #007bff; padding-left: 12px; margin-top: 0; font-size: 1.5em; }
-        p { margin-bottom: 10px; font-size: 0.95em; }
+        h2 { border-left: 5px solid #28a745; padding-left: 12px; margin: 0 0 10px 0; font-size: 1.4em; }
+        p { margin-bottom: 12px; font-size: 0.95em; color: #555; }
 
+        /* Tags rápidas */
         ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
-        li { background: #f8f9fa; padding: 5px 12px; border-radius: 20px; border: 1px solid #efefef; font-size: 0.85em; }
+        li { background: #e9f5ff; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; color: #0056b3; font-weight: bold; border: 1px solid #d0e8ff; }
         
-        /* IMAGENS MENORES */
-        .img-container { width: 100%; max-width: 500px; margin: 0 auto; }
+        /* Ajuste das suas Imagens */
+        .img-container { width: 100%; text-align: center; }
         img { 
-            display: block; 
-            width: 100%;
-            height: 220px; /* Tamanho reduzido para caber ao clicar */
+            width: 100%; 
+            max-width: 500px; 
+            height: 250px; 
             object-fit: cover; 
             border-radius: 10px; 
+            background: #eee;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        footer { text-align: center; padding: 30px; font-size: 0.8em; color: #888; }
+        footer { text-align: center; padding: 30px; font-size: 0.8em; color: #888; border-top: 1px solid #ddd; background: #fff; }
     </style>
 </head>
 <body>
 
-<header><h1>TIPOS DE ENERGIA</h1></header>
+<header>
+    <h1>Tipos de Energia Renovável</h1>
+</header>
 
 <nav>
     <a href="#solar">Solar</a>
@@ -75,58 +93,65 @@
     <a href="#hidro">Hidro</a>
     <a href="#biomassa">Biomassa</a>
     <a href="#geo">Geotérmica</a>
+    <a href="#h2v">Hidrogênio</a>
 </nav>
 
 <div class="container">
     
+    <!-- SOLAR -->
     <div class="card" id="solar">
         <h2>Energia Solar ☀️</h2>
-        <p>Capta a luz do sol através de painéis fotovoltaicos para gerar eletricidade.</p>
-        <ul><li>✨ Luz Solar</li><li>⚡ Painéis</li><li>🔄 Inversor</li></ul>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Solar">
-        </div>
+        <p>Geração de eletricidade através da captação da luz do sol por painéis fotovoltaicos.</p>
+        <ul><li>✨ Sustentável</li><li>⚡ Redução de Custos</li></ul>
+        <img src="solar.jpg" alt="Painéis Solares Azuis">
     </div>
 
+    <!-- EÓLICA -->
     <div class="card" id="eolica">
         <h2>Energia Eólica 🌪️</h2>
-        <p>Utiliza a força dos ventos para girar hélices e acionar geradores elétricos.</p>
-        <ul><li>🌬️ Vento</li><li>⚙️ Turbinas</li><li>⚡ Limpa</li></ul>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Eólica">
-        </div>
+        <p>Transforma a força dos ventos em energia elétrica através de grandes aerogeradores.</p>
+        <ul><li>🌬️ Ventos Fortes</li><li>🌍 Impacto Zero</li></ul>
+        <img src="eolica.jpg" alt="Turbina Eólica">
     </div>
 
+    <!-- HIDRELÉTRICA -->
     <div class="card" id="hidro">
         <h2>Energia Hidrelétrica 💧</h2>
-        <p>Aproveita o movimento das águas em rios e barragens para gerar energia.</p>
-        <ul><li>🌊 Rios</li><li>🔄 Turbinas</li><li>🔌 Estável</li></ul>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Hidro">
-        </div>
+        <p>Utiliza o fluxo e a pressão das águas em grandes usinas como Itaipu para gerar energia estável.</p>
+        <ul><li>🌊 Rios e Barragens</li><li>🔌 Base Nacional</li></ul>
+        <img src="eagua.jpg" alt="Usina de Itaipu">
     </div>
 
+    <!-- BIOMASSA -->
     <div class="card" id="biomassa">
         <h2>Energia Biomassa 🪵</h2>
-        <p>Gerada através da decomposição de matéria orgânica (plantas e resíduos).</p>
-        <ul><li>🚜 Orgânica</li><li>🔥 Vapor</li><li>♻️ Reuso</li></ul>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Biomassa">
-        </div>
+        <p>Obtida pela queima de matéria orgânica, bagaço de cana ou resíduos de madeira.</p>
+        <ul><li>🚜 Reaproveitamento</li><li>🔥 Vapor Industrial</li></ul>
+        <img src="emassa.jpg" alt="Matéria Orgânica/Usina">
     </div>
 
+    <!-- GEOTÉRMICA -->
     <div class="card" id="geo">
         <h2>Energia Geotérmica 🔥</h2>
-        <p>Utiliza o calor do interior da Terra para gerar vapor e eletricidade constante.</p>
-        <ul><li>🕳️ Calor</li><li>💨 Vapor</li><li>🌍 Interna</li></ul>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Geotérmica">
-        </div>
+        <p>Aproveita o calor natural do interior da Terra para produzir vapor e movimentar turbinas.</p>
+        <ul><li>🕳️ Calor Interno</li><li>🌍 Energia 24h</li></ul>
+        <img src="geotermica.jpg" alt="Geiser/Vapor Geotérmico">
+    </div>
+
+    <!-- HIDROGÊNIO VERDE -->
+    <div class="card" id="h2v">
+        <h2>Hidrogênio Verde 🔋</h2>
+        <p>Considerado o combustível do futuro, é produzido a partir da água usando fontes 100% limpas.</p>
+        <ul><li>🧪 Eletrólise</li><li>🌿 Emissão Zero</li></ul>
+        <!-- Se você não tiver a foto, pode usar o link abaixo como teste -->
+        <img src="hidrogenio.jpg" alt="H2V Sustentável">
     </div>
 
 </div>
 
-<footer><p>Site criado por <strong>Luan</strong> para atividade escolar &copy; 2024</p></footer>
+<footer>
+    <p>Site desenvolvido por <strong>Luan</strong> para Atividade Escolar &copy; 2024</p>
+</footer>
 
 </body>
 </html>
