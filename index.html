@@ -5,27 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos de Energia</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 0; background-color: #f4f4f4; }
-        
-        header { background-color: #333; color: white; padding: 20px; text-align: center; }
-        
-        /* Estilo do Menu NAV */
-        nav { background: #444; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9em; }
-        nav a:hover { color: #ffcc00; }
+        /* Ajuste para o scroll não cobrir o título e ser suave */
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 100px; 
+        }
 
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 0; 
+            background-color: #f0f2f5; 
+            color: #333;
+        }
+        
+        header { 
+            background-color: #ffffff; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+
+        header h1 { margin: 0; font-size: 2.5em; color: #1a1a1a; }
+
+        /* MENU NAV ATUALIZADO (MODERNO) */
+        nav { 
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+            padding: 15px 0; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        nav a { 
+            color: #555; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: 600; 
+            font-size: 0.85em; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #007bff; }
+
+        /* CONTAINER DAS DIVS */
         .container { padding: 20px; }
 
-        /* Uso de DIV para criar cards */
-        .card { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        /* CARDS DE ENERGIA */
+        .card { 
+            background: #ffffff; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            margin-bottom: 40px; 
+            border: 1px solid #eee;
+        }
         
-        h2 { border-left: 5px solid #ffcc00; padding-left: 10px; margin-top: 0; }
-        ul { list-style: none; padding: 0; margin-top: 15px; }
-        li { margin-bottom: 8px; background: #f9f9f9; padding: 8px; border-radius: 5px; }
+        h2 { 
+            border-left: 6px solid #007bff; 
+            padding-left: 15px; 
+            margin-top: 0; 
+            color: #222;
+            font-size: 1.8em;
+        }
+
+        p { margin-bottom: 20px; color: #555; }
+
+        /* LISTAS CORRIGIDAS */
+        ul { list-style: none; padding: 0; }
+        li { 
+            margin-bottom: 10px; 
+            background: #f8f9fa; 
+            padding: 12px; 
+            border-radius: 8px; 
+            border: 1px solid #efefef;
+        }
         
-        img { display: block; margin: 20px auto; border-radius: 8px; max-width: 100%; height: auto; border: 1px solid #ddd; }
+        img { 
+            display: block; 
+            margin: 25px auto 10px; 
+            border-radius: 12px; 
+            max-width: 100%; 
+            height: auto; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
         
-        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777; background: #fff; margin-top: 20px; }
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            font-size: 0.9em; 
+            color: #888; 
+        }
     </style>
 </head>
 <body>
@@ -34,11 +111,10 @@
     <h1>TIPOS DE ENERGIA</h1>
 </header>
 
-<!-- NAV adicionada -->
 <nav>
     <a href="#solar">Solar</a>
     <a href="#eolica">Eólica</a>
-    <a href="#hidro">Hidrelétrica</a>
+    <a href="#hidro">Hidro</a>
     <a href="#biomassa">Biomassa</a>
     <a href="#geo">Geotérmica</a>
 </nav>
@@ -60,7 +136,7 @@
     <!-- EÓLICA -->
     <div class="card" id="eolica">
         <h2>Energia Eólica 🌪️</h2>
-        <p>As turbinas eólicas utilizam a força dos ventos para girar hélices e acionar um gerador elétrico. É uma das fontes mais limpas do mundo, ocupando pouco espaço terrestre.</p>
+        <p>As turbinas eólicas utilizam a força dos ventos para girar hélices e acionar um gerador elétrico. É uma das fontes mais limpas do mundo, ocupando pouco espaço terrestre entre as torres.</p>
         <ul>
             <li>🌬️ <strong>Vento:</strong> Movimenta as pás da turbina.</li>
             <li>⚙️ <strong>Rotor:</strong> Transfere o giro para o gerador.</li>
@@ -77,7 +153,7 @@
             <li>🌊 <strong>Represa:</strong> Acumula água para criar pressão.</li>
             <li>📉 <strong>Dutos:</strong> A água desce com força total.</li>
             <li>🔄 <strong>Turbina:</strong> O impacto faz as pás girarem.</li>
-            <li>🔌 <strong>Gerador:</strong> Transforma o giro em luz.</li>
+            <li>🔌 <strong>Gerador:</strong> Transforma o giro em luz para cidades.</li>
         </ul>
         <img src="eagua.jpg" alt="Usina Hidrelétrica">
     </div>
@@ -85,7 +161,7 @@
     <!-- BIOMASSA -->
     <div class="card" id="biomassa">
         <h2>Energia Biomassa 🪵</h2>
-        <p>A biomassa é gerada através da queima ou decomposição de matéria orgânica, como o bagaço da cana. Ajuda na gestão de resíduos, transformando lixo em energia útil.</p>
+        <p>A biomassa é gerada através da queima ou decomposição de matéria orgânica, como o bagaço da cana. Funciona como uma bateria natural, transformando resíduos em energia útil.</p>
         <ul>
             <li>🚜 <strong>Matéria:</strong> Usa restos de plantas e animais.</li>
             <li>🔥 <strong>Calor:</strong> A queima gera vapor em caldeiras.</li>
@@ -97,7 +173,7 @@
     <!-- GEOTÉRMICA -->
     <div class="card" id="geo">
         <h2>Energia Geotérmica 🔥</h2>
-        <p>Utiliza o calor proveniente do interior da Terra para gerar energia. Diferente do sol e vento, ela fornece eletricidade 24 horas por dia, independente do clima.</p>
+        <p>Utiliza o calor proveniente do interior da Terra, como vapor ou água quente, para gerar energia. Ela fornece eletricidade 24 horas por dia, independente do clima.</p>
         <ul>
             <li>🕳️ <strong>Poços:</strong> Acessam o calor interno da Terra.</li>
             <li>💨 <strong>Vapor:</strong> O calor sobe e gira as turbinas.</li>
@@ -109,7 +185,7 @@
 </div>
 
 <footer>
-    <p>Site criado por Luan, para atividade escolar &copy; 2024</p>
+    <p>Site criado por <strong>Luan</strong> para atividade escolar &copy; 2024</p>
 </footer>
 
 </body>
