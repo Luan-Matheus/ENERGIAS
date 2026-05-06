@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos de Energia</title>
     <style>
-        /* Ajuste para o scroll não cobrir o título e ser suave */
         html { 
             scroll-behavior: smooth; 
             scroll-padding-top: 100px; 
@@ -21,18 +20,12 @@
             color: #333;
         }
         
-        header { 
-            background-color: #ffffff; 
-            padding: 40px 20px; 
-            text-align: center; 
-        }
-
+        header { background-color: #ffffff; padding: 40px 20px; text-align: center; }
         header h1 { margin: 0; font-size: 2.5em; color: #1a1a1a; }
 
-        /* MENU NAV ATUALIZADO (MODERNO) */
         nav { 
-            background: rgba(255, 255, 255, 0.85); 
-            backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(10px); 
             padding: 15px 0; 
             text-align: center; 
             position: sticky; 
@@ -55,10 +48,8 @@
 
         nav a:hover { color: #007bff; }
 
-        /* CONTAINER DAS DIVS */
         .container { padding: 20px; }
 
-        /* CARDS DE ENERGIA */
         .card { 
             background: #ffffff; 
             padding: 30px; 
@@ -68,41 +59,23 @@
             border: 1px solid #eee;
         }
         
-        h2 { 
-            border-left: 6px solid #007bff; 
-            padding-left: 15px; 
-            margin-top: 0; 
-            color: #222;
-            font-size: 1.8em;
-        }
+        h2 { border-left: 6px solid #007bff; padding-left: 15px; margin-top: 0; color: #222; font-size: 1.8em; }
 
-        p { margin-bottom: 20px; color: #555; }
-
-        /* LISTAS CORRIGIDAS */
-        ul { list-style: none; padding: 0; }
-        li { 
-            margin-bottom: 10px; 
-            background: #f8f9fa; 
-            padding: 12px; 
-            border-radius: 8px; 
-            border: 1px solid #efefef;
-        }
+        ul { list-style: none; padding: 0; margin-top: 15px; }
+        li { margin-bottom: 10px; background: #f8f9fa; padding: 12px; border-radius: 8px; border: 1px solid #efefef; }
         
+        .img-container { width: 100%; max-width: 600px; margin: 20px auto; }
+
         img { 
             display: block; 
-            margin: 25px auto 10px; 
+            width: 100%;
+            height: 350px; 
+            object-fit: cover; 
             border-radius: 12px; 
-            max-width: 100%; 
-            height: auto; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         
-        footer { 
-            text-align: center; 
-            padding: 40px; 
-            font-size: 0.9em; 
-            color: #888; 
-        }
+        footer { text-align: center; padding: 40px; font-size: 0.9em; color: #888; }
     </style>
 </head>
 <body>
@@ -121,71 +94,75 @@
 
 <div class="container">
     
-    <!-- SOLAR -->
     <div class="card" id="solar">
         <h2>Energia Solar ☀️</h2>
-        <p>A energia solar capta a luz do sol através de painéis fotovoltaicos para gerar eletricidade. É uma fonte silenciosa, de baixa manutenção e ideal para instalação em telhados residenciais.</p>
+        <p>A energia solar capta a luz do sol através de painéis fotovoltaicos para gerar eletricidade.</p>
         <ul>
             <li>✨ <strong>Luz:</strong> Painéis captam os fótons do sol.</li>
             <li>⚡ <strong>Células:</strong> O silício gera corrente elétrica.</li>
             <li>🔄 <strong>Inversor:</strong> Ajusta a energia para uso doméstico.</li>
         </ul>
-        <img src="solar.jpg" alt="Painéis Solares">
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Solar">
+        </div>
     </div>
 
-    <!-- EÓLICA -->
     <div class="card" id="eolica">
         <h2>Energia Eólica 🌪️</h2>
-        <p>As turbinas eólicas utilizam a força dos ventos para girar hélices e acionar um gerador elétrico. É uma das fontes mais limpas do mundo, ocupando pouco espaço terrestre entre as torres.</p>
+        <p>As turbinas eólicas utilizam a força dos ventos para girar hélices e acionar um gerador elétrico.</p>
         <ul>
             <li>🌬️ <strong>Vento:</strong> Movimenta as pás da turbina.</li>
             <li>⚙️ <strong>Rotor:</strong> Transfere o giro para o gerador.</li>
             <li>⚡ <strong>Energia:</strong> A rotação cria eletricidade limpa.</li>
         </ul>
-        <img src="eolica.jpg" alt="Turbinas Eólicas">
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Eólica">
+        </div>
     </div>
 
-    <!-- HIDRELÉTRICA -->
     <div class="card" id="hidro">
         <h2>Energia Hidrelétrica 💧</h2>
-        <p>Aproveita o movimento e a força das águas em rios ou barragens para movimentar grandes turbinas. Fornece uma enorme quantidade de energia de forma estável, sendo a base da matriz brasileira.</p>
+        <p>Aproveita o movimento e a força das águas em rios ou barragens para movimentar grandes turbinas.</p>
         <ul>
             <li>🌊 <strong>Represa:</strong> Acumula água para criar pressão.</li>
-            <li>📉 <strong>Dutos:</strong> A água desce com força total.</li>
             <li>🔄 <strong>Turbina:</strong> O impacto faz as pás girarem.</li>
-            <li>🔌 <strong>Gerador:</strong> Transforma o giro em luz para cidades.</li>
+            <li>🔌 <strong>Gerador:</strong> Transforma o giro em luz.</li>
         </ul>
-        <img src="eagua.jpg" alt="Usina Hidrelétrica">
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Hidro">
+        </div>
     </div>
 
-    <!-- BIOMASSA -->
     <div class="card" id="biomassa">
         <h2>Energia Biomassa 🪵</h2>
-        <p>A biomassa é gerada através da queima ou decomposição de matéria orgânica, como o bagaço da cana. Funciona como uma bateria natural, transformando resíduos em energia útil.</p>
+        <p>Gerada através da queima ou decomposição de matéria orgânica. Funciona como uma bateria natural.</p>
         <ul>
             <li>🚜 <strong>Matéria:</strong> Usa restos de plantas e animais.</li>
             <li>🔥 <strong>Calor:</strong> A queima gera vapor em caldeiras.</li>
-            <li>💨 <strong>Pressão:</strong> O vapor movimenta os motores.</li>
+            <li>♻️ <strong>Resíduo:</strong> Transforma lixo em energia útil.</li>
         </ul>
-        <img src="emassa.jpg" alt="Biomassa">
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Biomassa">
+        </div>
     </div>
 
-    <!-- GEOTÉRMICA -->
     <div class="card" id="geo">
         <h2>Energia Geotérmica 🔥</h2>
-        <p>Utiliza o calor proveniente do interior da Terra, como vapor ou água quente, para gerar energia. Ela fornece eletricidade 24 horas por dia, independente do clima.</p>
+        <p>Utiliza o calor proveniente do interior da Terra para gerar energia. Fornece eletricidade 24 horas por dia.</p>
         <ul>
             <li>🕳️ <strong>Poços:</strong> Acessam o calor interno da Terra.</li>
             <li>💨 <strong>Vapor:</strong> O calor sobe e gira as turbinas.</li>
             <li>🌍 <strong>Retorno:</strong> A água é reinjetada no solo.</li>
         </ul>
-        <img src="geotermica.jpg" alt="Usina Geotérmica">
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Geotérmica">
+        </div>
     </div>
 
 </div>
 
 <footer>
-    <p>Site criado por <strong>Luan</strong> para atividade escolar.</p>
+    <p>Site criado por <strong>Luan</strong> para atividade escolar &copy; 2024</p>
 </footer>
 
 </body>
