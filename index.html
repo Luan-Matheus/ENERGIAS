@@ -3,108 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energias no Paraná</title>
+    <title>Francis Bacon: O Pai do Empirismo</title>
     <style>
-        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.5; max-width: 850px; margin: 0 auto; background-color: #f0f2f5; color: #333; }
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 100px; 
+        }
         
-        header { background: #fff; padding: 30px; text-align: center; border-bottom: 2px solid #ddd; }
-        header h1 { margin: 0; font-size: 2em; letter-spacing: 1px; }
-
-        nav { background: #fff; padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav a { color: #007bff; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 0.85em; text-transform: uppercase; }
-        nav a:hover { color: #0056b3; }
-
-        .container { padding: 25px; }
-        .card { background: #fff; padding: 25px; border-radius: 15px; margin-bottom: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 850px; margin: 0 auto; background-color: #f4f4f9; color: #333; }
         
-        h2 { font-size: 1.7em; margin-bottom: 10px; color: #222; border-bottom: 3px solid #28a745; display: inline-block; padding-bottom: 5px; }
-        .loc { color: #28a745; font-weight: bold; font-size: 0.9em; margin-bottom: 15px; display: block; }
-        p { color: #666; margin-bottom: 20px; }
+        header { background: #fff; padding: 40px 20px; text-align: center; border-bottom: 1px solid #ddd; }
+        header h1 { margin: 0; font-size: 2.2em; letter-spacing: 1px; color: #1a1a1a; text-transform: uppercase; }
 
-        /* MOLDURA PARA AS SUAS FOTOS FICAREM CERTINHAS */
+        nav { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(12px);          
+            -webkit-backdrop-filter: blur(12px);   
+            padding: 18px 0; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a { color: #2c3e50; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 0.85em; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: #e67e22; }
+
+        .container { padding: 20px; }
+        .card { background: #fff; padding: 35px; border-radius: 15px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; }
+        
+        h2 { font-size: 1.8em; margin-bottom: 10px; color: #2c3e50; border-bottom: 3px solid #e67e22; display: inline-block; padding-bottom: 5px; }
+        .tag { color: #e67e22; font-weight: bold; font-size: 0.95em; margin-bottom: 15px; display: block; text-transform: uppercase; }
+        p { color: #555; margin-bottom: 25px; font-size: 1.1em; text-align: justify; }
+
         .moldura { 
             width: 100%; 
-            max-width: 650px; 
-            height: 380px; 
+            max-width: 100%; 
+            height: auto; 
+            min-height: 250px;
+            max-height: 500px; 
             overflow: hidden; 
             border-radius: 12px; 
             margin: 0 auto; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
         }
-        .moldura img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .moldura img { width: 100%; height: 500px; object-fit: cover; display: block; }
+
+        /* ESTILO DO QUIZ */
+        .quiz-container { background: #2c3e50; color: white; padding: 40px; border-radius: 15px; text-align: center; margin-bottom: 40px; }
+        .quiz-container h3 { margin-bottom: 20px; font-size: 1.5em; }
+        .options { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+        .btn-quiz { 
+            background: #fff; 
+            color: #2c3e50; 
+            border: none; 
+            padding: 12px 20px; 
+            width: 100%; 
+            max-width: 400px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            transition: 0.3s;
+            font-size: 1em;
+        }
+        .btn-quiz:hover { background: #f0f2f5; }
+        .correct { background: #28a745 !important; color: white !important; }
+        .wrong { background: #dc3545 !important; color: white !important; }
         
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.9em; }
+        footer { text-align: center; padding: 50px 20px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; margin-top: 20px; }
+
+        @media (max-width: 600px) {
+            nav a { margin: 0 5px; font-size: 0.7em; }
+            header h1 { font-size: 1.5em; }
+        }
     </style>
 </head>
 <body>
 
-<header><h1>ENERGIAS NO PARANÁ</h1></header>
+<header><h1>Francis Bacon</h1></header>
 
 <nav>
-    <a href="#solar">Solar</a>
-    <a href="#eolica">Eólica</a>
-    <a href="#hidro">Hidro</a>
-    <a href="#biomassa">Biomassa</a>
-    <a href="#geo">Geotérmica</a>
-    <a href="#h2v">Hidrogênio</a>
+    <a href="#biografia">Biografia</a>
+    <a href="#metodo">Método</a>
+    <a href="#idolos">Ídolos</a>
+    <a href="#obras">Obras</a>
+    <a href="#quiz">Desafio</a>
 </nav>
 
 <div class="container">
     
-    <!-- SOLAR -->
-    <div class="card" id="solar">
-        <h2>Energia Solar ☀️</h2>
-        <span class="loc">📍 Onde: UFPR (Curitiba), Cascavel e Assaí</span>
-        <p>O Paraná é destaque nacional em geração solar, com usinas inovadoras em todo o estado.</p>
-        <div class="moldura"><img src="https://googleapis.com" alt="Suas Fotos: Solar"></div>
+    <div class="card" id="biografia">
+        <h2>Biografia</h2>
+        <span class="tag">Vida e Carreira Política</span>
+        <p>Francis Bacon (1561–1626) foi um filósofo, estadista e cientista inglês. Nascido em Londres, ocupou cargos importantes como o de Lorde Chanceler. É considerado um dos fundadores do pensamento moderno e do método científico, defendendo que o conhecimento deve ser baseado na experiência prática.</p>
+        <div class="moldura">
+            <img src="https://wikimedia.org" alt="Retrato oficial de Francis Bacon">
+        </div>
     </div>
 
-    <!-- EÓLICA -->
-    <div class="card" id="eolica">
-        <h2>Energia Eólica 🌪️</h2>
-        <span class="loc">📍 Onde: Palmas</span>
-        <p>A região de Palmas, no sul do estado, aproveita os ventos constantes para mover suas turbinas.</p>
-        <div class="moldura"><img src="https://unsplash.com" alt="Suas Fotos: Eólica"></div>
+    <div class="card" id="metodo">
+        <h2>Método Indutivo</h2>
+        <span class="tag">Saber é Poder</span>
+        <p>Bacon criticava a filosofia abstrata e defendia o Empirismo. Seu método baseava-se na coleta de dados, observação rigorosa e experimentação. Para ele, a ciência deveria dar ao homem ferramentas para dominar a natureza e melhorar a condição de vida da sociedade.</p>
+        <div class="moldura">
+            <img src="https://worldhistory.org" alt="Representação da Revolução Científica">
+        </div>
     </div>
 
-    <!-- HIDRO -->
-    <div class="card" id="hidro">
-        <h2>Energia Hidrelétrica 💧</h2>
-        <span class="loc">📍 Onde: Foz do Iguaçu (Itaipu)</span>
-        <p>A majestosa Usina de Itaipu é a principal fonte de energia limpa do nosso estado.</p>
-        <div class="moldura"><img src="https://wikimedia.org" alt="Suas Fotos: Itaipu"></div>
+    <div class="card" id="idolos">
+        <h2>Teoria dos Ídolos</h2>
+        <span class="tag">Os Bloqueios da Mente</span>
+        <p>Bacon identificou quatro erros mentais que impedem a ciência: Ídolos da Tribo, da Caverna, do Foro e do Teatro. Superar esses preconceitos e dogmas era, para ele, o único caminho para alcançar a verdade científica através da razão límpida.</p>
+        <div class="moldura">
+            <img src="https://unsplash.com" alt="Ciência e Observação">
+        </div>
     </div>
 
-    <!-- BIOMASSA -->
-    <div class="card" id="biomassa">
-        <h2>Energia Biomassa 🪵</h2>
-        <span class="loc">📍 Onde: Carambeí e Indústrias do Norte</span>
-        <p>Utiliza restos orgânicos e biomassa florestal para gerar calor e eletricidade sustentável.</p>
-        <div class="moldura"><img src="https://unsplash.com" alt="Suas Fotos: Biomassa"></div>
+    <div class="card" id="obras">
+        <h2>Principais Obras</h2>
+        <span class="tag">Produção Intelectual</span>
+        <p>Suas obras mais famosas incluem o "Novum Organum", onde detalha seu novo método de investigação, e "Nova Atlântida", uma utopia que descreve uma sociedade governada por cientistas e pela razão técnica.</p>
+        <div class="moldura">
+            <img src="https://wikimedia.org" alt="Capa original do Novum Organum">
+        </div>
     </div>
 
-    <!-- GEOTÉRMICA -->
-    <div class="card" id="geo">
-        <h2>Energia Geotérmica 🔥</h2>
-        <span class="loc">📍 Onde: Termas de Foz do Iguaçu</span>
-        <p>O calor do Aquífero Guarani aquece águas termais usadas para turismo e lazer no Paraná.</p>
-        <div class="moldura"><img src="https://unsplash.com" alt="Suas Fotos: Geotérmica"></div>
-    </div>
-
-    <!-- HIDROGÊNIO -->
-    <div class="card" id="h2v">
-        <h2>Hidrogênio Verde 🔋</h2>
-        <span class="loc">📍 Onde: UFPR (Curitiba) e Araucária</span>
-        <p>O Paraná lidera pesquisas com o combustível do futuro na usina piloto da UFPR.</p>
-        <div class="moldura"><img src="https://wikimedia.org" alt="Hidrogênio Verde"></div>
+    <!-- SEÇÃO DO QUIZ -->
+    <div class="quiz-container" id="quiz">
+        <h3>Desafio Final: Teste seus conhecimentos</h3>
+        <p style="color: #bdc3c7; text-align: center;">Qual o nome da teoria de Francis Bacon sobre os erros que bloqueiam a mente humana?</p>
+        <div class="options">
+            <button class="btn-quiz" onclick="checkAnswer(this, false)">Teoria da Evolução</button>
+            <button class="btn-quiz" onclick="checkAnswer(this, true)">Teoria dos Ídolos</button>
+            <button class="btn-quiz" onclick="checkAnswer(this, false)">Teoria da Relatividade</button>
+            <button class="btn-quiz" onclick="checkAnswer(this, false)">Teoria das Ideias</button>
+        </div>
+        <p id="feedback" style="margin-top: 15px; font-weight: bold;"></p>
     </div>
 
 </div>
 
 <footer>
-    <p>Site atualizado por <strong>Luan</strong> para Atividade Escolar &copy; 2024</p>
+    <p>Conteúdo organizado por <strong>Luan</strong> para Atividade Acadêmica &copy; 2024</p>
 </footer>
+
+<script>
+    function checkAnswer(button, isCorrect) {
+        // Seleciona todos os botões do quiz
+        const buttons = document.querySelectorAll('.btn-quiz');
+        const feedback = document.getElementById('feedback');
+        
+        // Remove cores anteriores
+        buttons.forEach(btn => {
+            btn.classList.remove('correct', 'wrong');
+        });
+
+        // Adiciona a cor certa
+        if (isCorrect) {
+            button.classList.add('correct');
+            feedback.innerHTML = "Parabéns! Você acertou.";
+            feedback.style.color = "#28a745";
+        } else {
+            button.classList.add('wrong');
+            feedback.innerHTML = "Ops! Resposta errada. Tente novamente.";
+            feedback.style.color = "#ff4d4d";
+        }
+    }
+</script>
 
 </body>
 </html>
